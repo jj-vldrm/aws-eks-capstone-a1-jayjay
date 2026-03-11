@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jj-a1-namespace-capstone
+  labels:
+    env: training
+    team: a1
+    project: eks-capstone-jayjay
