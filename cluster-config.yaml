@@ -1,0 +1,28 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: jayjay-a1-cluster-capstone
+  region: us-west-2
+  version: "1.34"
+  tags:
+    env: training
+    team: a1
+    project: eks-capstone-jayjay
+
+vpc:
+  id: "vpc-0a5bba9764ba10621"
+  subnets:
+    public:
+      us-west-2a:
+        id: "subnet-0f0d8947f94ae8e6a"
+      us-west-2b:
+        id: "subnet-0ac2cd13dace93192"
+    private:
+      us-west-2a:
+        id: "subnet-011c4e3f2c2f6a18d"
+      us-west-2b:
+        id: "subnet-0b783ff9271f5dac4"
+
+iam:
+  serviceRoleARN: "arn:aws:iam::163125487384:role/jayjay-a1-iamrole-capstone"
