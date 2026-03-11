@@ -1,0 +1,21 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: jayjay-a1-cluster-capstone
+  region: us-west-2
+
+managedNodeGroups:
+  - name: jayjay-a1-nodegroup-capstone
+    instanceType: t3.medium
+    minSize: 1
+    maxSize: 4
+    desiredCapacity: 3
+    privateNetworking: true
+    iam:
+      instanceRoleARN: "arn:aws:iam::163125487384:role/jayjay-a1-noderole-capstone"
+    tags:
+      Name: jayjay-a1-nodegroup-capstone
+      env: training
+      team: a1
+      project: eks-capstone-jayjay
